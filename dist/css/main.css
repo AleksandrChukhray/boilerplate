@@ -42,3 +42,32 @@
   font-style: normal;
   font-stretch: normal;
   unicode-range: U+0020-00FE; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.header__wrapper {
+  height: 86px;
+  background-color: #e8e8e8;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.69);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.69);
+  position: relative;
+  z-index: 999; }
+
+.header .navbar-default {
+  background-color: transparent;
+  border: 0;
+  margin: 20px 0 0; }
+
+.header .top-line {
+  height: 26px;
+  background: url("/img/top-line-bg.png") center -20px repeat-x #fff; }
+
+#main-wrapper {
+  width: 100%;
+  min-height: calc(100% - 192px);
+  position: relative; }
+
+body {
+  background: rgba(255, 255, 255, 0.5); }

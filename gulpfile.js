@@ -116,9 +116,6 @@ gulp.task('server', () => {
   browserSync.init({
     server: './dist/'
   });
-
-  browserSync.watch('./**/*.{css,js}').on('change', browserSync.reload);
-  browserSync.watch('./**/*.html').on('change', browserSync.reload);
 });
 
 

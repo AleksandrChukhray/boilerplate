@@ -1,16 +1,20 @@
 doctype
 html
-    head
-        title Main Page
-        block links
-            include ../partical/_links
-        block scripts
-            include ../partical/_scripts
-    body
-        block heder
-            include ../partical/_header
-
-        block content
-
-        block footer
-            include ../partical/_footer
+  head
+    title Main Page
+    block meta
+      include  ../partical/_meta
+    block links
+      include ../partical/_links
+    block scripts
+      include ../partical/_scripts
+  body
+    block header
+      include ../partical/_header
+    #main-wrapper
+      .container
+        .row
+          .col-sm-12
+              block content
+    block footer
+      include ../partical/_footer

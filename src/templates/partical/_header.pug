@@ -1,1 +1,29 @@
-h1 this is header page
+header.header#header
+  .header__wrapper
+    .container
+      .header__nav
+        nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false").button
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a(href="#" class="navbar-brand logo" id="logo")
+                .logo__wrapper
+                  img(src="img/logo.png" class="logo__img" alt="Lootstore")
+                .logo__slogan.
+                  Первый в Украине Магазин вещей Dota 2 и cs:go
+            .collapse.navbar-collapse#bs-example-navbar-collapse-1
+              ul.nav.navbar-nav
+                li
+                  a(href="#") Инструкции
+                li
+                  a(href="#") Техподдержка
+                li
+                  a(href="#") Гарантии
+                li
+                  a(href="#") Отзывы
+  .header__top-line
+    .top-line
