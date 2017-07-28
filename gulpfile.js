@@ -28,23 +28,6 @@ gulp.task('sass', () => {
 });
 
 //собирам скрипты
-gulp.task('coffee', () => {
-  return gulp.src('./scripts/script.js.coffee')
-    .pipe(plumber({
-      errorHandler: notify.onError((err) => {
-        return {
-          title: 'Scripts',
-          message: err.message
-        }
-      })
-    }))
-    .pipe(coffee({bare: true}))
-    .pipe(rename('script.js'))
-    .pipe(gulp.dest('./dist/js/'))
-    .pipe(browserSync.stream())
-});
-
-//собирам скрипты
 gulp.task('js', () => {
   return gulp.src('./src/js/*.js')
     .pipe(plumber({
@@ -78,7 +61,7 @@ gulp.task('pug', function buildHTML() {
 
 //Минимизируем изображения
 gulp.task('images', () => {
-  return gulp.src('./src/img/*.{jpg,png}')
+  return gulp.src('./src/img/**/*.{jpg,png}')
     .pipe(plumber({
       errorHandler: notify.onError((err) => {
         return {
@@ -105,11 +88,25 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('./dist/fonts'))
 });
 
+gulp.task('vendor', () => {
+    return gulp.src('./src/vendor/**/*.*')
+        .pipe(plumber({
+            errorHandler: notify.onError((err) => {
+                return {
+                    title: 'Vendor',
+                    message: err.message
+                }
+            })
+        }))
+        .pipe(gulp.dest('./dist/vendor/'))
+});
+
+
 //dev server
-gulp.task('build', gulp.series('sass', 'pug', 'images', 'fonts', 'js'));
+gulp.task('build', gulp.series('sass', 'pug', 'images', 'fonts', 'js', 'vendor'));
 
 gulp.task('watch', () => {
-  gulp.watch('./src/stylus/**/*.*', gulp.series('sass'));
+  gulp.watch('./src/style/**/*.*', gulp.series('sass'));
   gulp.watch('./src/templates/**/*.*', gulp.series('pug'));
   gulp.watch('./src/js/**/*.*', gulp.series('js'));
 });

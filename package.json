@@ -4,7 +4,8 @@
   "description": "pug-sass-js-bilerplate",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "postinstall": "bower install && gulp dev"
   },
   "keywords": [
     "gup",

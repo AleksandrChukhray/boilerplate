@@ -1,9 +1,11 @@
 doctype
 html
     head
-        title My Site - #{title}
+        title Main Page
+        block links
+            include ../partical/_links
         block scripts
-            script(src='/js/script.js')
+            include ../partical/_scripts
     body
         block heder
             include ../partical/_header
