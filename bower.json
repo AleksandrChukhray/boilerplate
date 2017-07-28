@@ -1,0 +1,23 @@
+{
+  "name": "pug-sass-js-boilerplate",
+  "description": "pug-sass-js-bilerplate",
+  "main": "gulpfile.js",
+  "authors": [
+    "Alex Chukhray"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gup",
+    "sass",
+    "js",
+    "boilerplate"
+  ],
+  "homepage": "https://github.com/AleksandrChukhray/boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
