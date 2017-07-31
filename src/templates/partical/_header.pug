@@ -1,29 +1,72 @@
 header.header#header
   .header__wrapper
     .container
-      .header__nav
+      .header__item.header__item_type_nav
         nav.navbar.navbar-default
           .container-fluid
             .navbar-header
-              button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false").button
+              button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false").button
                 span.sr-only Toggle navigation
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
               a(href="#" class="navbar-brand logo" id="logo")
                 .logo__wrapper
-                  img(src="img/logo.png" class="logo__img" alt="Lootstore")
+                  img(src="img/logo@2x.png" class="logo__img" alt="Lootstore")
                 .logo__slogan.
-                  Первый в Украине Магазин вещей Dota 2 и cs:go
-            .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                  Первый в Украине Магазин <br /> вещей Dota 2 и cs:go
+            .collapse.navbar-collapse#navbar-collapse
               ul.nav.navbar-nav
-                li
+                li.nav__item
                   a(href="#") Инструкции
-                li
+                li.nav__item
                   a(href="#") Техподдержка
-                li
+                li.nav__item
                   a(href="#") Гарантии
-                li
+                li.nav__item
                   a(href="#") Отзывы
+      .header__item.header__item_type_login
+        div.login.login-active
+          a(href="").login__img
+            img(src="/img/user_img.png")
+          .login__text
+            a(href="").login__logout выйти
+            a(href="").login__login войти
+      .header__item.header__item_type_currency
+        div(class="dropdown dropdown_type_currency currency")
+          a(href="#" class="dropdown-toggle currency__link" id="currency" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false").
+            <div class="currency__price">0</div><span class="currency__name">RUB <i class="ico ico-arrow_down"></i></span>
+          ul(class="dropdown-menu currency__wrapper" aria-labelledby="currency")
+            li.currency__item
+              a(href="#") RUB
+            li.currency__item
+              a(href="#") USD
+            li.currency__item
+              a(href="#") EUA
+      .header__item.header__item_type_language
+        div(class="dropdown dropdown_type_lang language")
+          a(href="#" class="dropdown-toggle language__link" id="flag-img" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+            img(src="/img/flags/ukraine.svg")
+          ul(class="dropdown-menu language__wrapper" aria-labelledby="flag-img")
+            li.language__item
+              a(href="#")
+                img(src="/img/flags/belarus.svg")
+            li.language__item
+              a(href="#")
+                img(src="/img/flags/ukraine.svg")
+            li.language__item
+              a(href="#")
+                img(src="/img/flags/russia.svg")
+            li.language__item
+              a(href="#")
+                img(src="/img/flags/united-states.svg")
+      .header__item.header__item_type_socials
+        ul.socials.socials_type_header
+          li.socials__item.socials__item_type_fb
+            a(href="#")
+              i.fa.fa-facebook(aria-hidden="true")
+          li.socials__item.socials__item_type_vk
+            a(href="#")
+              i.fa.fa-vk(aria-hidden="true")
   .header__top-line
     .top-line

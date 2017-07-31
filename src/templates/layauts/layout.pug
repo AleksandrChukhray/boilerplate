@@ -9,12 +9,13 @@ html
     block scripts
       include ../partical/_scripts
   body
-    block header
-      include ../partical/_header
+
     #main-wrapper
-      .container
-        .row
-          .col-sm-12
-              block content
+      block header
+        include ../partical/_header
+      .wrapper
+        block content
+      block buy
+        include ../partical/_buy
     block footer
       include ../partical/_footer

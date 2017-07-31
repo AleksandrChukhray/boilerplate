@@ -1,0 +1,26 @@
+@mixin stitches-ico($x, $y, $width, $height)
+  background-position: $x $y
+  width: $width
+  height: $height
+
+.ico
+  background-image: url('/img/spritesheet.png')
+  background-repeat: no-repeat
+  display: inline-block
+
+  &.ico-arrow_down
+    @include stitches-ico(-5px, -5px, 9px, 5px)
+  &.ico-fb-logo
+    @include stitches-ico(-24px, -5px, 32px, 32px)
+  &.ico-fb-logo-header
+    @include stitches-ico(-66px, -5px, 32px, 32px)
+  &.ico-mail
+    @include stitches-ico(-108px, -5px, 14px, 11px)
+  &.ico-pole-flag
+    @include stitches-ico(-132px, -5px, 11px, 15px)
+  &.ico-steam-logo
+    @include stitches-ico(-153px, -5px, 40px, 25px)
+  &.ico-vk
+    @include stitches-ico(-203px, -5px, 33px, 33px)
+  &.ico-vk-header
+    @include stitches-ico(-246px, -5px, 33px, 33px)

@@ -5,10 +5,110 @@
     box-shadow: 0 0 15px rgba(#000, 0.69)
     position: relative
     z-index: 999
+  &__item
+    &_type_nav
+      float: left
+    &_type_login
+      background-color: #fff
+    float: right
+    height: 86px
+  &_nav
+    padding-top: 1px
   .navbar-default
     background-color: transparent
     border: 0
-    margin: 20px 0 0
-  .top-line
-    height: 26px
-    background: url('/img/top-line-bg.png') center -20px repeat-x #fff
+    margin: 9px 0 0
+  .nav
+    margin: 10px 0 0 0
+    &__item
+      text-transform: uppercase
+      font: bold 14px $font700, sans-serif
+      color: #525252
+      a
+        padding: 15px 10px
+  .navbar-collapse
+    float: left
+
+
+.logo
+  height: auto
+  padding: 0
+  margin: 0
+  &__wrapper
+    width: 92px
+    height: 69px
+    float: left
+  &__img
+    width: 100%
+    height: auto
+  &__slogan
+    float: left
+    margin: 15px 0 0 0
+    font: bold 16px $font900, sans-serif
+    text-transform: uppercase
+    color: #000
+    @media screen and (max-width: 1200px)
+      display: none
+.language
+  width: 49px
+  height: 100%
+  float: left
+  border: 1px solid #b4b4b4
+  border-top: 0
+  border-bottom: 0
+  text-align: center
+  &__link
+    display: inline-block
+    margin: 30px 0 0 0
+    width: 26px
+    height: 17px
+  &__wrapper
+    min-width: 49px
+  &__item
+    a
+      padding: 0 10px !important
+.currency
+  text-align: center
+  width: 70px
+  height: 100%
+  padding: 10px 0 0 0
+  &__link
+    text-decoration: none!important
+    color: #8b0a0a
+  &__wrapper
+    min-width: 70px
+  &__price
+    font: bold 24px $font900, sans-serif
+  &__name
+    font: bold 12px/12px $font900, sans-serif
+    display: inline-block
+    margin: 0 -3px 0 0
+  .ico
+    vertical-align: 2px
+  &__item
+    a
+      font: bold 12px "Museo Sans Cyrl 900", sans-serif
+      color: #8b0a0a
+.login
+  float: left
+  width: 71px
+  margin: 12px 0 0
+  background-color: #fff
+  text-align: center
+  &.login-active
+    .login__text
+      font: bold 12px $font700, sans-serif
+      .login__logout
+        color: #7b7a7a
+        font-size: 12px
+        text-decoration: underline
+    .login__text
+      .login__login
+        display: none
+        color: #7b7a7a
+        font-size: 12px
+
+      
+.top-line
+  height: 26px
+  background: url('/img/top-line-bg.png') center -20px repeat-x #fff

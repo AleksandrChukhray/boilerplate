@@ -1,0 +1,41 @@
+.footer
+  min-height: 120px
+  background-color: #555
+  padding: 16px 0 0
+  &__item
+    &_type_logo
+      float: left
+    &_type_nav
+      float: left
+    &_type_webmoney
+      float: left
+      margin: 15px 0 0 0
+    &_type_socials
+      float: right
+    &_type_text
+      float: right
+.footer-nav
+  @extend .clearfix
+  position: relative
+  &_type_nav
+    margin: 15px 0 0 30px
+  &_type_text
+    margin: 15px 0 0 -5px
+    .footer-nav__item
+      text-transform: none
+  &__wrapper
+    position: relative
+    overflow: hidden
+    margin: 0 10px 0 0
+    &_type_left
+      float: left
+  &__item
+    font: 12px $font500, sans-serif
+    color: #fff
+    text-transform: uppercase
+    display: block
+    max-width: 170px
+    margin: 0 0 10px 0
+    &:hover
+      color: #fff
+      text-decoration: none

@@ -87,7 +87,7 @@ gulp.task('pug', function buildHTML() {
 
 //Минимизируем изображения
 gulp.task('images', () => {
-  return gulp.src('./src/img/**/*.{jpg,png}')
+  return gulp.src('./src/img/**/*.{jpg,png,svg}')
     .pipe(cached('images'))
     .pipe(remember('images'))
     .pipe(imagemin())
