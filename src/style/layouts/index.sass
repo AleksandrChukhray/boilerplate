@@ -9,3 +9,47 @@
     position: absolute
     margin: 0 auto
     top: 0
+  &__sub-img
+    position: absolute
+    z-index: $index
+    cursor: pointer
+    filter: grayscale(100%)
+    @extend .trans
+    &:hover
+      filter: grayscale(0)
+    &_type_auto
+      top: 150px
+      left: 590px
+      @media screen and (max-width : 1200px)
+        top: 119px
+        left: 482px
+      @media screen and (max-width : 992px)
+        top: 90px
+        left: 373px
+    &_type_dota
+      top: 456px
+      left: 219px
+      @media screen and (max-width : 1200px)
+        top: 365px
+        left: 186px
+      @media screen and (max-width : 992px)
+        top: 275px
+        left: 149px
+    &_type_cs-go
+      top: 429px
+      left: 921px
+      @media screen and (max-width : 1200px)
+        top: 342px
+        left: 748px
+      @media screen and (max-width : 992px)
+        top: 256px
+        left: 572px
+    &_type_shield
+      top: 210px
+      left: 188px
+      @media screen and (max-width : 1200px)
+        top: 167px
+        left: 161px
+      @media screen and (max-width : 992px)
+        top: 126px
+        left: 132px

@@ -1,8 +1,17 @@
 extends layauts/layout
 
 block content
-    .main-img#main-img
-        img(src="/img/main-image.jpg").main-img__img
+  .main-img#main-img
+    img(src="/img/main-image.jpg").main-img__img
     .container
-        .row
-            .col-sm-12
+      .row
+        .col-sm-12
+          a(href="#").main-img__link_type_auto
+            img(src="/img/auto-color.png").main-img__sub-img.main-img__sub-img_type_auto
+          a(href="#").main-img__link_type_cs-go
+            img(src="/img/cs-go-color.png").main-img__sub-img.main-img__sub-img_type_cs-go
+          a(href="#").main-img__link_type_dota
+            img(src="/img/dota-color.png").main-img__sub-img.main-img__sub-img_type_dota
+          a(href="#").main-img__link_type_shield
+            img(src="/img/shield-color.png").main-img__sub-img.main-img__sub-img_type_shield
+

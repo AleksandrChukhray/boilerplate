@@ -6,12 +6,18 @@
     position: relative
     z-index: 999
   &__item
+    float: right
+    height: 86px
     &_type_nav
       float: left
     &_type_login
       background-color: #fff
-    float: right
-    height: 86px
+    &_type_socials
+      @media screen and (max-width: 992px)
+        display: none
+    &_type_language
+      @media screen and (max-width: 992px)
+        display: none
   &_nav
     padding-top: 1px
   .navbar-default
