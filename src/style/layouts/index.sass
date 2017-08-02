@@ -9,32 +9,40 @@
     position: absolute
     margin: 0 auto
     top: 0
+    &_type_man-grey
+      z-index: $index-level-2
+    //filter: invert(100%)
   &__sub-img
-    position: absolute
-    z-index: $index
-    cursor: pointer
+    opacity: 1
     filter: grayscale(100%)
     @extend .trans
-    &:hover
-      filter: grayscale(0)
+  &__link
+    position: absolute
+    z-index: $index-level-l
+    cursor: pointer
+    &.hover
+      .cases
+        opacity: 1
+      .main-img__sub-img
+        filter: grayscale(0)
     &_type_auto
-      top: 150px
-      left: 590px
+      top: 126px
+      left: 571px
       @media screen and (max-width : 1200px)
-        top: 119px
-        left: 488px
+        top: 101px
+        left: 476px
       @media screen and (max-width : 992px)
-        top: 90px
-        left: 381px
+        top: 76px
+        left: 372px
     &_type_dota
-      top: 456px
-      left: 219px
+      top: 472px
+      left: 157px
       @media screen and (max-width : 1200px)
-        top: 365px
-        left: 193px
+        top: 379px
+        left: 144px
       @media screen and (max-width : 992px)
-        top: 274px
-        left: 158px
+        top: 284px
+        left: 122px
     &_type_cs-go
       top: 429px
       left: 921px
@@ -45,11 +53,139 @@
         top: 258px
         left: 578px
     &_type_shield
-      top: 210px
-      left: 188px
+      top: 191px
+      left: 306px
       @media screen and (max-width : 1200px)
-        top: 167px
-        left: 169px
+        top: 154px
+        left: 263px
       @media screen and (max-width : 992px)
-        top: 126px
-        left: 140px
+        top: 117px
+        left: 210px
+  .cases
+    width: 200px
+    height: 100px
+    position: absolute
+    text-align: center
+    border: 8px solid #fff
+    background-color: transparent
+    padding: 9px 0 0
+    opacity: 0.5
+    color: #000
+    @extend .trans
+    &_type_cs-go
+      top: 195px
+      left: -175px
+      @media screen and (max-width : 1200px)
+        top: 124px
+        left: -187px
+        transform: scale(0.8)
+      @media screen and (max-width : 992px)
+        top: 97px
+        left: -150px
+        transform: scale(0.6)
+    &_type_shield
+      top: -42px
+      left: -191px
+      @media screen and (max-width : 1200px)
+        top: -37px
+        left: -157px
+        transform: scale(0.8)
+      @media screen and (max-width : 992px)
+        top: -43px
+        left: -160px
+        transform: scale(0.6)
+    &_type_dota
+      top: -54px
+      left: -67px
+      @media screen and (max-width : 1200px)
+        top: -46px
+        left: -67px
+        transform: scale(0.8)
+      @media screen and (max-width : 992px)
+        top: -43px
+        left: -110px
+        transform: scale(0.6)
+    &_type_auto
+      top: 3px
+      left: 485px
+      @media screen and (max-width : 1200px)
+        top: 0
+        left: 263px
+        transform: scale(0.8)
+      @media screen and (max-width : 992px)
+        top: -13px
+        left: 180px
+        transform: scale(0.6)
+    &:after
+      content: ''
+      width: 18px
+      height: 18px
+      background-color: #af0000
+      position: absolute
+      transform: rotate(45deg)
+    &_pos_left
+      &:after
+        top: -16px
+        left: -16px
+    &_pos_right
+      &:after
+        top: -16px
+        right: -16px
+    &__text
+      font: 30px $font900, sans-serif
+      text-transform: uppercase
+    &__name
+      color: #af0000
+    .cases-stick
+      //display: none
+      position: absolute
+      &_type_cs-go
+        top: -58px
+        left: 192px
+      &_type_shield
+        top: 89px
+        left: 85px
+      &_type_dota
+        top: 40px
+        left: 190px
+      &_type_auto
+        top: 41px
+        left: -173px
+  .pattern
+    position: absolute
+    width: 100px
+    height: 100px
+    top: 390px
+    left: 726px
+    z-index: $index-level-3
+    &__text
+      font: 60px $font900, sans-serif
+      position: absolute
+      top: -130px
+      left: 100px
+      text-transform: uppercase
+    &__img
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      //animation:
+      //  animation-name
+      //  animation-duration
+      //  animation-timing-function
+      //  animation-delay
+      //  animation-iteration-count
+      //  animation-direction
+      //  animation-play-state
+      &_type-step-1
+        opacity: 0
+        animation: fadeInFadeOut 1s linear infinite alternate
+      &_type-step-2
+        opacity: 0
+        animation: fadeInFadeOut 1s linear 1s infinite alternate
+      &_type-step-3
+        opacity: 0
+        animation: fadeInFadeOut 1s linear 2s infinite alternate
+.content
+  position: relative

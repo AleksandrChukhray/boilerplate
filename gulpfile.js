@@ -20,6 +20,8 @@ const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const clean = require('gulp-clean');
+
 
 const cached = require('gulp-cached'); //запоминает файлы которые через него проходят вместо {since: gulp.lastRun('sass')}
 const remember = require('gulp-remember'); //плагин для определения новых файлов.
@@ -88,7 +90,7 @@ gulp.task('pug', function buildHTML() {
 //Минимизируем изображения
 gulp.task('images', () => {
   return gulp.src('./src/img/**/*.{jpg,png,svg}')
-    .pipe(cached('images'))
+    //.pipe(cached('images'))
     .pipe(remember('images'))
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/img'))
@@ -161,6 +163,11 @@ gulp.task('server', () => {
   });
 });
 
+//чистка проекта
+gulp.task('clean', () => {
+    return gulp.src('./dist/', {read: false})
+        .pipe(clean());
+});
 
 //запускаем все подряд
 gulp.task('dev',

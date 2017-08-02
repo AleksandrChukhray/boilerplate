@@ -6,16 +6,14 @@ html
       include  ../partical/_meta
     block links
       include ../partical/_links
-    block scripts
-      include ../partical/_scripts
   body
 
     #main-wrapper
       block header
         include ../partical/_header
-      .wrapper
+      .content
         block content
-      block buy
-        include ../partical/_buy
     block footer
       include ../partical/_footer
+    block scripts
+      include ../partical/_scripts

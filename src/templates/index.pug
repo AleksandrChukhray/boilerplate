@@ -1,17 +1,39 @@
 extends layauts/layout
 
 block content
+  block stock
+    include partical/_stock
   .main-img#main-img
-    img(src="/img/main-image.jpg").main-img__img
+    img(src="/img/background-main.png").main-img__img.main-img__img_type_back
+    img(src="/img/men-grey.png").main-img__img.main-img__img_type_man-grey
     .container
       .row
         .col-sm-12
-          a(href="#").main-img__link_type_auto
+          a(href="#auto").main-img__link.main-img__link_type_auto
             img(src="/img/auto-color.png").main-img__sub-img.main-img__sub-img_type_auto
-          a(href="#").main-img__link_type_cs-go
+            .cases.cases_type_auto.cases_pos_left
+              .cases__text Магазин <span class="cases__name">CS:GO</span>
+              img(src="/img/auto-stick.png").cases-stick.cases-stick_type_auto
+          a(href="#cs-go").main-img__link.main-img__link_type_cs-go
             img(src="/img/cs-go-color.png").main-img__sub-img.main-img__sub-img_type_cs-go
-          a(href="#").main-img__link_type_dota
+            .cases.cases_type_cs-go.cases_pos_right
+              .cases__text Кейсы <span class="cases__name">CS:GO</span>
+              img(src="/img/cs-go-stick.png").cases-stick.cases-stick_type_cs-go
+          a(href="#dota").main-img__link.main-img__link_type_dota
             img(src="/img/dota-color.png").main-img__sub-img.main-img__sub-img_type_dota
-          a(href="#").main-img__link_type_shield
+            .cases.cases_type_dota.cases_pos_left
+              .cases__text Кейсы <span class="cases__name">Dota 2</span>
+              img(src="/img/dota-stick.png").cases-stick.cases-stick_type_dota
+          a(href="#shield").main-img__link.main-img__link_type_shield
             img(src="/img/shield-color.png").main-img__sub-img.main-img__sub-img_type_shield
+            .cases.cases_type_shield.cases_pos_right
+              .cases__text Магазин <span class="cases__name">Dota 2</span>
+              img(src="/img/shield-stick.png").cases-stick.cases-stick_type_shield
+          .pattern
+            img(src="/img/pattern-step-1.png").pattern__img.pattern__img_type-step-1
+            img(src="/img/pattern-step-2.png").pattern__img.pattern__img_type-step-2
+            img(src="/img/pattern-step-3.png").pattern__img.pattern__img_type-step-3
+            .pattern__text купуй українське
+  block buy
+    include partical/_buy
 
