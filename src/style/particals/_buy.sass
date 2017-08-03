@@ -7,26 +7,82 @@
   &__wrapper
     padding: 50px 0 0 0
     height: 145px
+    overflow: hidden
+    position: relative
     &_type_left
-      color: inherit
       border-right: 1px solid #b0b0b0
+      @media screen and (max-width: 992px)
+        //color: inherit
+      @media screen and (max-width: 768px)
+        border-right: 0
+        border-bottom: 1px solid #b0b0b0
+      @media screen and (max-width: 480px)
+        //color: inherit
       &:hover
         i
           background-position: -675px -5px
       i
         display: block
-        float: right
-        margin: -40px 0 0
+        position: absolute
+        top: 18px
+        right: 58px
+        @media screen and (max-width: 992px)
+          top: 18px
+          right: -40px
+        @media screen and (max-width: 768px)
+          //color: inherit
+          top: 18px
+          right: 10px
+        @media screen and (max-width: 480px)
+          //color: inherit
       .btn
         float: left
+        margin: -3px 0 0 61px
+        @media screen and (max-width: 992px)
+          margin: 0 0 0 0
+        @media screen and (max-width: 768px)
+          //color: inherit
+          float: none
+          margin: 0 auto
+        @media screen and (max-width: 480px)
+          //color: inherit
     &_type_right
-      color: inherit
+      @media screen and (max-width: 992px)
+        //color: inherit
+      @media screen and (max-width: 768px)
+        //color: inherit
+      @media screen and (max-width: 480px)
+        //color: inherit
       &:hover
         i
           background-position: -241px -5px
       i
         display: block
-        float: left
-        margin: -40px 0 0
+        position: absolute
+        top: 5px
+        left: 39px
+        @media screen and (max-width: 992px)
+          //color: inherit
+          top: 5px
+          left: -20px
+        @media screen and (max-width: 768px)
+          //color: inherit
+          top: 5px
+          left: auto
+          right: 10px
+        @media screen and (max-width: 480px)
+          //color: inherit
       .btn
         float: right
+        margin: -10px 51px 0 0
+        @media screen and (max-width: 992px)
+          margin: 0 0 0 0
+        @media screen and (max-width: 768px)
+          //color: inherit
+          float: none
+          margin: 0 auto
+        @media screen and (max-width: 480px)
+          //color: inherit
+    .btn
+      z-index: $index-level-l
+      position: relative

@@ -2,6 +2,8 @@
   position: relative
   min-height: 758px
   overflow: hidden
+  @media screen and (max-width : 768px)
+    display: none
   &__wrapper
     position: relative
     margin: 0 auto
@@ -21,22 +23,22 @@
     z-index: $index-level-l
     cursor: pointer
     &.hover
-      .cases
-        opacity: 1
+      .cases, .cases-stick
+        opacity: 1 !important
       .main-img__sub-img
         filter: grayscale(0)
     &_type_auto
-      top: 126px
-      left: 571px
+      top: 138px
+      left: 558px
       @media screen and (max-width : 1200px)
-        top: 101px
-        left: 476px
+        top: 112px
+        left: 456px
       @media screen and (max-width : 992px)
         top: 76px
         left: 372px
     &_type_dota
-      top: 472px
-      left: 157px
+      top: 482px
+      left: 144px
       @media screen and (max-width : 1200px)
         top: 379px
         left: 144px
@@ -44,8 +46,8 @@
         top: 284px
         left: 122px
     &_type_cs-go
-      top: 429px
-      left: 921px
+      top: 438px
+      left: 909px
       @media screen and (max-width : 1200px)
         top: 341px
         left: 755px
@@ -53,8 +55,8 @@
         top: 258px
         left: 578px
     &_type_shield
-      top: 191px
-      left: 306px
+      top: 202px
+      left: 292px
       @media screen and (max-width : 1200px)
         top: 154px
         left: 263px
@@ -68,13 +70,13 @@
     text-align: center
     border: 8px solid #fff
     background-color: transparent
-    padding: 9px 0 0
+    padding: 10px 0 0
     opacity: 0.5
     color: #000
     @extend .trans
     &_type_cs-go
-      top: 195px
-      left: -175px
+      top: 202px
+      left: -161px
       @media screen and (max-width : 1200px)
         top: 124px
         left: -187px
@@ -84,8 +86,11 @@
         left: -150px
         transform: scale(0.6)
     &_type_shield
-      top: -42px
-      left: -191px
+      top: -23px
+      left: -177px
+      &:after
+        top: -16px
+        right: -16px
       @media screen and (max-width : 1200px)
         top: -37px
         left: -157px
@@ -95,8 +100,11 @@
         left: -160px
         transform: scale(0.6)
     &_type_dota
-      top: -54px
-      left: -67px
+      top: -53px
+      left: -59px
+      &:after
+        top: -7px
+        left: -17px
       @media screen and (max-width : 1200px)
         top: -46px
         left: -67px
@@ -106,8 +114,11 @@
         left: -110px
         transform: scale(0.6)
     &_type_auto
-      top: 3px
-      left: 485px
+      top: 15px
+      left: 426px
+      &:after
+        top: -16px
+        left: -16px
       @media screen and (max-width : 1200px)
         top: 0
         left: 263px
@@ -123,21 +134,13 @@
       background-color: #af0000
       position: absolute
       transform: rotate(45deg)
-    &_pos_left
-      &:after
-        top: -16px
-        left: -16px
-    &_pos_right
-      &:after
-        top: -16px
-        right: -16px
     &__text
-      font: 30px $font900, sans-serif
+      font: 30px/32px $font900, sans-serif
       text-transform: uppercase
     &__name
       color: #af0000
     .cases-stick
-      //display: none
+      opacity: 0
       position: absolute
       &_type_cs-go
         top: -58px
@@ -153,16 +156,24 @@
         left: -173px
   .pattern
     position: absolute
-    width: 100px
-    height: 100px
-    top: 390px
-    left: 726px
+    width: 140px
+    height: 147px
+    top: 357px
+    left: 704px
     z-index: $index-level-3
+    @media screen and (max-width : 1200px)
+      top: 277px
+      left: 544px
+      transform: scale(0.8)
+    @media screen and (max-width : 992px)
+      top: 357px
+      left: 704px
+      transform: scale(0.6)
     &__text
-      font: 60px $font900, sans-serif
+      font: 60px/60px $font900, sans-serif
       position: absolute
-      top: -130px
-      left: 100px
+      top: -85px
+      left: 109px
       text-transform: uppercase
     &__img
       width: 100%

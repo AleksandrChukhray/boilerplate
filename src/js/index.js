@@ -1,5 +1,8 @@
-function ScaleImg(option) {
+function ScaleImg(option, offsetX, offsetY) {
     this.scale = 1;
+
+    this.offsetX = offsetX || 0;
+    this.offsetY = offsetY || 0;
 
     this.img = option;
     this.imgWidth = option.width();
@@ -42,9 +45,10 @@ ScaleImg.prototype = {
             bodyWidth = this.body.width(),
             imgWidth = this.img.width();
 
-        offset = (bodyWidth - imgWidth) / 2;
+        offset =  ((bodyWidth - imgWidth) / 2) - this.offsetX ;
         img.css({
-            left: offset
+            left: offset,
+            top: this.offsetY
         });
     },
     changeImgSize: function (width) {
@@ -183,8 +187,8 @@ $(document).ready(function () {
         auto_img = $('.main-img__sub-img_type_auto'),
 
         //init images
-        man = new ScaleImg(manImg),
-        bg = new ScaleImg(bgImg),
+        man = new ScaleImg(manImg, 28, 10),
+        bg = new ScaleImg(bgImg, 28, 10),
 
         csGoImg = new SubScaleImg(cs_go_img),
         dotaImg = new SubScaleImg(dota_img),

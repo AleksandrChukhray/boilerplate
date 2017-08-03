@@ -9,6 +9,7 @@
   border: 1px solid #b82929
   border-radius: 0
   background-color: #fff
+  display: block
   &:hover
     color: #fff
     background-color: #b82929
@@ -18,11 +19,24 @@
     width: 200px
     height: 31px
     font: 14px/31px $font500, sans-serif
+    @media screen and (max-width: 1200px)
+      //color: inherit
+    @media screen and (max-width: 992px)
+      //color: inherit
+    @media screen and (max-width: 768px)
+      width: 150px
     &:hover
       color: #b82929!important
       background-color: #fff
+
   &_md
     color: inherit
   &_lg
     width: 300px
     height: 46px
+    @media screen and (max-width: 992px)
+      width: 250px
+    @media screen and (max-width: 768px)
+      //color: inherit
+    @media screen and (max-width: 480px)
+      //color: inherit

@@ -4,7 +4,7 @@
     background-color: #e8e8e8
     box-shadow: 0 0 15px rgba(#000, 0.69)
     position: relative
-    z-index: $index-level-l
+    z-index: 10001
   &__item
     float: right
     height: 86px
@@ -12,12 +12,7 @@
       float: left
     &_type_login
       background-color: #fff
-    &_type_socials
-      @media screen and (max-width: 992px)
-        display: none
-    &_type_language
-      @media screen and (max-width: 992px)
-        display: none
+
   &_nav
     padding-top: 1px
   .navbar-default
@@ -25,15 +20,17 @@
     border: 0
     margin: 9px 0 0
   .nav
-    margin: 10px 0 0 0
+    margin: 12px 0 0 40px
     &__item
       text-transform: uppercase
       font: bold 14px $font700, sans-serif
       color: #525252
       a
-        padding: 15px 10px
+        padding: 15px 9px
   .navbar-collapse
     float: left
+  .navbar-toggle
+    display: none
 
 
 .logo
@@ -49,8 +46,8 @@
     height: auto
   &__slogan
     float: left
-    margin: 15px 0 0 0
-    font: bold 16px $font900, sans-serif
+    margin: 16px 0 0 9px
+    font: bold 18px $font900, sans-serif
     text-transform: uppercase
     color: #000
     @media screen and (max-width: 1200px)
@@ -63,9 +60,16 @@
   border-top: 0
   border-bottom: 0
   text-align: center
+  @media screen and (max-width: 992px)
+    display: none
+  @media screen and (max-width: 768px)
+    display: block
+    text-align: center
+  @media screen and (max-width: 480px)
+    display: none
   &__link
     display: inline-block
-    margin: 30px 0 0 0
+    margin: 29px 0 0 -1px
     width: 26px
     height: 17px
   &__wrapper
@@ -75,12 +79,19 @@
       padding: 0 10px !important
 .currency
   text-align: center
-  width: 70px
+  width: 68px
   height: 100%
-  padding: 10px 0 0 0
+  @media screen and (max-width: 992px)
+    text-align: center
+  @media screen and (max-width: 768px)
+    width: 50px
+  @media screen and (max-width: 480px)
+    text-align: center
   &__link
     text-decoration: none!important
     color: #8b0a0a
+    display: block
+    margin: 14px 0 0 -2px
   &__wrapper
     min-width: 70px
   &__price
@@ -88,7 +99,7 @@
   &__name
     font: bold 12px/12px $font900, sans-serif
     display: inline-block
-    margin: 0 -3px 0 0
+    margin: 0 -11px 0 0
   .ico
     vertical-align: 2px
   &__item
@@ -97,10 +108,16 @@
       color: #8b0a0a
 .login
   float: left
-  width: 71px
+  width: 70px
   margin: 12px 0 0
   background-color: #fff
   text-align: center
+  @media screen and (max-width: 992px)
+    text-align: center
+  @media screen and (max-width: 768px)
+    width: 50px
+  @media screen and (max-width: 480px)
+    text-align: center
   &.login-active
     .login__text
       font: bold 12px $font700, sans-serif
@@ -117,4 +134,4 @@
       
 .top-line
   height: 26px
-  background: url('/img/top-line-bg.png') center -20px repeat-x #fff
+  background: url('/img/top-line-bg.png') 15px -24px repeat-x #fff
