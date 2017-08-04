@@ -22,6 +22,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const clean = require('gulp-clean');
 
+//const spritesmith = require("gulp-spritesmith");
+//const gulpif = require("gulp-if");
+//const sprite = require('gulp-sprite-generator');
 
 const cached = require('gulp-cached'); //запоминает файлы которые через него проходят вместо {since: gulp.lastRun('sass')}
 const remember = require('gulp-remember'); //плагин для определения новых файлов.
@@ -96,17 +99,17 @@ gulp.task('images', () => {
     .pipe(gulp.dest('./dist/img'))
 });
 
+//spites
 gulp.task('sprites', function () {
-  return  gulp.src('./src/**/png/*.png')
-    .pipe(tasks.spritesmith({
-      imgName: 'sprite.png',
-      styleName: 'sprite.css',
-      imgPath: '../img/sprite.png'
-    }))
-    .pipe(gulpif('*.png', gulp.dest('./dist/img/')))
-    .pipe(gulpif('*.css', gulp.dest('./dist/css/')));
+    return  gulp.src('./src/**/png/*.png')
+        .pipe(tasks.spritesmith({
+            imgName: 'sprite.png',
+            styleName: 'sprite.css',
+            imgPath: '../img/sprite.png'
+        }))
+        .pipe(gulpif('*.png', gulp.dest('./dist/img/')))
+        .pipe(gulpif('*.css', gulp.dest('./dist/css/')));
 });
-
 
 //Переносим шрифты
 gulp.task('fonts', () => {
@@ -159,7 +162,8 @@ gulp.task('watch', () => {
 //подключаем сервер
 gulp.task('server', () => {
   browserSync.init({
-    server: './dist'
+    server: './dist',
+    index: 'shop.html'
   });
 });
 

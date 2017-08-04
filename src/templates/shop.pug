@@ -1,0 +1,24 @@
+extends layauts/layout
+
+block content
+  .page.page_type_shop
+    .container
+      .row
+        .col-sm-12
+          .shop
+            .shop__wrapper
+              h1.shop__title.page-title магазни <span class="page-title__color">dota 2</span>
+              .shop__price.price
+                .price__text Cтоимость
+                .price__from
+                  label(for="input-from") от
+                  input(type="text" name="" id="input-from").price__input_type_from
+                .price__to
+                  label(for="input-from") -до
+                  input(type="text" name="" id="input-to").price__input_type_to
+                .price__slider
+                  input(type="text" name="example_name" value="")#slider
+              .spop__search
+                .search
+                  input(type="text" name="" id="search").search__input
+                  i.ico.ico-search

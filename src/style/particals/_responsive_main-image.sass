@@ -21,7 +21,7 @@
         width: 9px
         height: 9px
       @media screen and (max-width : 480px)
-        //top: 18px
+        display: none
       background-color: #af0000
       position: absolute
       transform: rotate(45deg)
@@ -62,6 +62,10 @@
     float: right
     margin: 80px 20px 0 0
     color: #000
+    position: relative
+    z-index: $index-level-0
+    @media screen and (max-width : 480px)
+      margin: 10px 10px 0 0
     span
       font: 36px/36px $font900, sans-serif
       text-transform: uppercase
@@ -77,8 +81,8 @@
       bottom: -20px
       left: 0
       @media screen and (max-width : 480px)
-        bottom: -50px
-        left: -110px
+        bottom: -70px
+        left: -93px
     &_type_case-dota
       bottom: -20px
       left: -40px
